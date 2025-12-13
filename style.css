@@ -109,3 +109,9 @@ h1 {
         margin: 40px auto;
     }
 }
+.social-icon {
+    width: 32px;    /* adjust size */
+    height: 32px;
+    margin: 0 8px;  /* spacing between icons */
+    vertical-align: middle;
+}
