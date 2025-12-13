@@ -5,6 +5,10 @@ css/style.css
     --gap: 1rem;
 }
 
+* {
+    box-sizing: border-box;
+}
+
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -13,31 +17,35 @@ body {
 }
 
 .container {
+    width: 90%;
     max-width: var(--max-width);
     margin: 0 auto;
     padding: 0 1rem;
 }
 
 h1 {
-    font-size: clamp(1.5rem, 5vw, 2.5rem); /* scales font on small to large screens */
+    font-size: clamp(1.5rem, 5vw, 2.5rem);
     text-align: center;
+    margin-bottom: 0.5rem;
 }
 
 .subtitle {
     text-align: center;
     font-size: clamp(1rem, 2.5vw, 1.25rem);
+    margin-bottom: 1rem;
 }
 
 .intro-text {
-    text-align: justify;
     font-size: 1rem;
+    text-align: justify;
+    margin-bottom: 2rem;
 }
 
 /* Profile photo */
 .profile-photo {
     display: block;
-    max-width: 200px;
-    width: 50%;
+    max-width: 80%;
+    width: 150px; /* default mobile size */
     height: auto;
     border-radius: 50%;
     margin: 1rem auto;
@@ -85,10 +93,10 @@ h1 {
     margin: 0.5rem;
 }
 
-/* --- Media queries for tablets and desktops --- */
+/* --- Media queries --- */
 
 /* Tablet */
-@media (min-width: 768px) {
+@media (min-width: 600px) {
     .nav-container {
         flex-direction: row;
         justify-content: space-between;
@@ -99,14 +107,15 @@ h1 {
 
     .nav-links {
         flex-direction: row;
-    }
-
-    .intro-text {
-        font-size: 1.1rem;
+        gap: 1rem;
     }
 
     .profile-photo {
-        width: 150px;
+        width: 180px;
+    }
+
+    .intro-text {
+        font-size: 1.05rem;
     }
 }
 
