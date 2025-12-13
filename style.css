@@ -1,117 +1,134 @@
 css/style.css
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+/* --- Base styles (mobile-first) --- */
+:root {
+    --max-width: 1200px;
+    --gap: 1rem;
 }
 
-/* Base styles */
 body {
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
-    color: #111;
-    background-color: #fff;
-    line-height: 1.6;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.5;
+}
+
+.container {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+h1 {
+    font-size: clamp(1.5rem, 5vw, 2.5rem); /* scales font on small to large screens */
+    text-align: center;
+}
+
+.subtitle {
+    text-align: center;
+    font-size: clamp(1rem, 2.5vw, 1.25rem);
+}
+
+.intro-text {
+    text-align: justify;
+    font-size: 1rem;
+}
+
+/* Profile photo */
+.profile-photo {
+    display: block;
+    max-width: 200px;
+    width: 50%;
+    height: auto;
+    border-radius: 50%;
+    margin: 1rem auto;
 }
 
 /* Navigation */
 .navbar {
-    border-bottom: 1px solid #eee;
+    background-color: #f8f8f8;
+    padding: 0.5rem 1rem;
 }
 
 .nav-container {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 20px;
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
     align-items: center;
-}
-
-.logo {
-    font-weight: 600;
-    text-decoration: none;
-    color: #111;
+    gap: 0.5rem;
 }
 
 .nav-links {
-    list-style: none;
     display: flex;
-    gap: 20px;
+    flex-direction: column;
+    gap: 0.5rem;
+    list-style: none;
+    padding: 0;
+    margin: 0;
 }
 
-.nav-links a {
+.nav-links li a {
     text-decoration: none;
-    color: #111;
-    font-size: 14px;
-}
-
-.nav-links a:hover {
-    text-decoration: underline;
-}
-
-/* Main content */
-.container {
-    max-width: 700px;
-    margin: 80px auto;
-    padding: 0 20px;
-    text-align: center;
-}
-
-.profile-photo {
-    width: 160px;
-    height: 160px;
-    object-fit: cover;
-    border-radius: 50%;
-    margin-bottom: 24px;
-}
-
-h1 {
-    font-size: 36px;
-    font-weight: 600;
-}
-
-.subtitle {
-    color: #555;
-    margin: 10px 0 20px;
-}
-
-.intro-text {
-    font-size: 16px;
     color: #333;
+    font-weight: bold;
 }
 
 /* Footer */
 .footer {
-    border-top: 1px solid #eee;
-    padding: 20px;
+    background-color: #f1f1f1;
     text-align: center;
-    font-size: 14px;
-    color: #666;
+    padding: 1rem;
+    margin-top: 2rem;
 }
 
-.footer a {
-    color: #666;
-    text-decoration: none;
-}
-
-.footer a:hover {
-    text-decoration: underline;
-}
-
-/* Responsive */
-@media (max-width: 600px) {
-    .nav-container {
-        flex-direction: column;
-        gap: 10px;
-    }
-
-    .container {
-        margin: 40px auto;
-    }
-}
-.social-icon {
-    width: 32px;    /* adjust size */
+.footer .social-icon {
+    width: 32px;
     height: 32px;
-    margin: 0 8px;  /* spacing between icons */
-    vertical-align: middle;
+    margin: 0.5rem;
+}
+
+/* --- Media queries for tablets and desktops --- */
+
+/* Tablet */
+@media (min-width: 768px) {
+    .nav-container {
+        flex-direction: row;
+        justify-content: space-between;
+        width: 100%;
+        max-width: var(--max-width);
+        margin: 0 auto;
+    }
+
+    .nav-links {
+        flex-direction: row;
+    }
+
+    .intro-text {
+        font-size: 1.1rem;
+    }
+
+    .profile-photo {
+        width: 150px;
+    }
+}
+
+/* Desktop */
+@media (min-width: 1024px) {
+    .container {
+        display: grid;
+        grid-template-columns: 1fr 400px;
+        gap: 2rem;
+        align-items: start;
+    }
+
+    .profile-photo {
+        width: 200px;
+        justify-self: center;
+    }
+
+    h1, .subtitle {
+        text-align: left;
+    }
+
+    .intro-text {
+        text-align: left;
+    }
 }
