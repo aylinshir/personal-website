@@ -10,10 +10,22 @@
   grid-template-columns: 1fr;
 }
 
+/* Text under photos */
+.photo-card p {
+  font-size: 1.05rem;   /* bigger on mobile */
+  line-height: 1.6;
+  margin-top: 0.5rem;
+  text-align: center;
+}
+
 /* Tablet */
 @media (min-width: 768px) {
   .photo-grid {
     grid-template-columns: repeat(3, 1fr);
+  }
+
+  .photo-card p {
+    font-size: 1.15rem;
   }
 }
 
@@ -22,4 +34,9 @@
   .photo-grid {
     grid-template-columns: repeat(5, 1fr);
   }
+
+  .photo-card p {
+    font-size: 1.2rem;
+  }
 }
+
