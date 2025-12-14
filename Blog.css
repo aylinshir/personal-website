@@ -1,0 +1,46 @@
+/* --- Blog page --- */
+
+.blog-container {
+    text-align: center;
+    max-width: 800px;
+}
+
+.blog-title {
+    font-size: clamp(1.6rem, 4vw, 2.2rem);
+    margin-bottom: 1.5rem;
+}
+
+.tiktok-icon {
+    width: 120px;
+    height: auto;
+    margin: 1rem auto;
+    display: block;
+}
+
+.tiktok-link {
+    display: inline-block;
+}
+
+.blog-text {
+    font-size: 1.05rem;
+    line-height: 1.7;
+    margin: 1rem 0;
+}
+
+/* Tablet */
+@media (min-width: 768px) {
+    .tiktok-icon {
+        width: 140px;
+    }
+
+    .blog-text {
+        font-size: 1.15rem;
+    }
+}
+
+/* Desktop */
+@media (min-width: 1024px) {
+    .tiktok-icon {
+        width: 160px;
+    }
+}
