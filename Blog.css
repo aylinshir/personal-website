@@ -2,18 +2,18 @@
 
 .blog-container {
     text-align: center;
-    max-width: 800px;
+    max-width: 900px;
 }
 
 .blog-title {
-    font-size: clamp(1.6rem, 4vw, 2.2rem);
-    margin-bottom: 1.5rem;
+    font-size: clamp(2rem, 4.5vw, 2.8rem); /* larger, stronger title */
+    margin-bottom: 2rem;
 }
 
 .tiktok-icon {
-    width: 120px;
+    width: 140px;        /* bigger icon on mobile */
     height: auto;
-    margin: 1rem auto;
+    margin: 1.5rem auto;
     display: block;
 }
 
@@ -22,25 +22,30 @@
 }
 
 .blog-text {
-    font-size: 1.05rem;
-    line-height: 1.7;
-    margin: 1rem 0;
+    font-size: 1.2rem;  /* noticeably larger body text */
+    line-height: 1.75;
+    margin: 1.25rem 0;
 }
 
 /* Tablet */
 @media (min-width: 768px) {
     .tiktok-icon {
-        width: 140px;
+        width: 170px;
     }
 
     .blog-text {
-        font-size: 1.15rem;
+        font-size: 1.3rem;
     }
 }
 
 /* Desktop */
 @media (min-width: 1024px) {
     .tiktok-icon {
-        width: 160px;
+        width: 190px;
+    }
+
+    .blog-text {
+        font-size: 1.35rem;
     }
 }
+
