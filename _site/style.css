@@ -1,9 +1,12 @@
 css/style.css
 .profile-photo {
-    width: 200px;        /* Adjust width to what you want */
-    height: 200px;       /* Adjust height */
-    object-fit: cover;   /* Crops image nicely */
-    border-radius: 50%;  /* Makes it circular */
-    display: block;      /* Needed to center */
-    margin: 20px auto;   /* Centers horizontally */
+    width: 200px;        /* Set the size of your profile photo */
+    height: 200px;       /* Keep width and height equal for a perfect circle */
+    object-fit: cover;   /* Ensures the image fills the circle without stretching */
+    border-radius: 50%;  /* Makes the photo circular */
+    display: block;      /* Allows centering with margin */
+    margin: 20px auto;   /* Centers the photo horizontally and adds vertical spacing */
+    border: 2px solid #fff; /* Optional: adds a white border around the circle */
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2); /* Optional: adds subtle shadow */
 }
+
