@@ -1,21 +1,25 @@
 /* About page photo grid */
 .photo-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
   gap: 1.5rem;
   margin-top: 2rem;
 }
 
-.photo-card {
-  text-align: center;
+/* Mobile (default) */
+.photo-grid {
+  grid-template-columns: 1fr;
 }
 
-.photo-card img {
-  width: 100%;
-  border-radius: 10px;
+/* Tablet */
+@media (min-width: 768px) {
+  .photo-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
 
-.photo-card p {
-  margin-top: 0.5rem;
-  font-size: 0.95rem;
+/* Desktop */
+@media (min-width: 1200px) {
+  .photo-grid {
+    grid-template-columns: repeat(5, 1fr);
+  }
 }
