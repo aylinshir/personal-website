@@ -1,9 +1,0 @@
-css/style.css
-.profile-photo {
-    width: 200px;        /* Adjust width to what you want */
-    height: 200px;       /* Adjust height */
-    object-fit: cover;   /* Crops image nicely */
-    border-radius: 50%;  /* Makes it circular */
-    display: block;      /* Needed to center */
-    margin: 20px auto;   /* Centers horizontally */
-}
